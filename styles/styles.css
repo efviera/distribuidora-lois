@@ -475,3 +475,175 @@ h1{
 #lineas{
     width: 20em;
 }
+
+/* Estilos para tablets (pantallas entre 768px y 1024px) */
+@media (max-width: 1024px) {
+    h1 {
+        font-size: 3em;
+    }
+
+    .encabezado button {
+        width: 16em;
+        height: 2.5em;
+    }
+
+    .palabras h2 {
+        font-size: 2em;
+    }
+
+    .infoMarca h4 {
+        font-size: 2em;
+    }
+
+    .catalogosContenedor {
+        flex-direction: column;
+    }
+
+    .pdfContenedor {
+        width: 80%;
+        height: auto;
+        margin-left: 0;
+    }
+
+    .textoCatalogos p {
+        margin: 0 4em;
+    }
+
+    .contacto {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedorEmail, .contenedorWhatsApp {
+        width: 100%;
+        border-radius: 0;
+    }
+
+    .pieDePagina {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedorLogosRedondos {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .logoRedondo {
+        width: 10em;
+        height: 10em;
+    }
+}
+
+/* Estilos para móviles (pantallas de menos de 768px) */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .contenedorEncabezado img {
+        filter: brightness(0.85) blur(0);
+    }
+
+    .encabezado {
+        max-width: 90%;
+    }
+
+    .encabezado button {
+        width: 14em;
+        height: 2.5em;
+        font-size: 1em;
+    }
+
+    .somosLois {
+        height: 12em;
+    }
+
+    .contenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .palabras {
+        margin: 1em 1em;
+        text-align: center;
+    }
+
+    .palabras h2 {
+        font-size: 1.5em;
+    }
+
+    .palabras p {
+        margin: 1em 0 0;
+    }
+
+    .slider {
+        flex-direction: column;
+    }
+
+    .slide {
+        min-width: 100%;
+    }
+
+    .infoMarca h4 {
+        font-size: 1.8em;
+    }
+
+    .descargarCatalogos {
+        height: auto;
+        padding: 2em 0;
+    }
+
+    .catalogosContenedor {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .pdfContenedor {
+        width: 90%;
+        height: auto;
+    }
+
+    .textoCatalogos {
+        margin: 0;
+        text-align: center;
+    }
+
+    .textoCatalogos h3 {
+        font-size: 1.5em;
+        margin: 1em 0;
+    }
+
+    .textoCatalogos p {
+        margin: 1em 0;
+        font-size: 1em;
+    }
+
+    .contacto {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedorEmail, .contenedorWhatsApp {
+        width: 100%;
+        height: auto;
+    }
+
+    .contenedorEmail p, .contenedorWhatsApp p {
+        font-size: 1.5em;
+    }
+
+    .pieDePagina {
+        flex-direction: column;
+        height: auto;
+    }
+
+    .contenedorLogosRedondos {
+        flex-direction: column;
+    }
+
+    .logoRedondo {
+        width: 8em;
+        height: 8em;
+    }
+}

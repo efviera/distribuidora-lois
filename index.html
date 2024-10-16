@@ -63,11 +63,11 @@
             <img src="assets/logo redondo cetol.png" alt="">
             <p>Cetol</p>
         </a>
-        <a href="" class="logoRedondo" target="_blank">
+        <a href="assets/Catálogo de Productos EL GALGO.pdf" class="logoRedondo" target="_blank">
             <img src="assets/logo redondo el galgo.png" alt="">
             <p>El Galgo</p>
         </a>
-        <a href="assets/Catálogo Lois PDF.pdf" class="logoRedondo" id="logoRedondoLois" target="_blank">
+        <a href="assets/Catálogo Lois PDF.pdf" class="logoRedondo" target="_blank">
             <img src="assets/LogoLois.png" alt="">
             <p>Lois</p>
         </a>
@@ -75,10 +75,10 @@
             <img src="assets/logo redondo mota.png" alt="">
             <p>Mota</p>
         </a>
-        <a href="" class="logoRedondo" target="_blank">
+        <!--a href="" class="logoRedondo" target="_blank">
             <img src="assets/logo redondo paintroller.png" alt="">
             <p>Paint Roller</p>
-        </a>
+        </a-->
         <a href="assets/Catalogo Penetrit.pdf" class="logoRedondo" target="_blank">
             <img src="assets/2.png" alt="">
             <p>Penetrit</p>
@@ -93,21 +93,35 @@
                 <div class="infoMarca lois">
                     <h4>Bandeja de pintor Lois</h4>
                     <p>Contamos con 3 medidas. <br>
+                        <br>
                         -Mini bandejas <br>
                         -Bandejas planas <br>
                         -Bandejas colgante con escurridor. <br>
+                        <br>
                         Las bandejas lois son un accesorio fundamental para los trabajos de pintura garantizando orden y prolijidad, ademas son practicas y comodas.</p>
                 </div>
             </div>
             <div class="articuloNuestraMarca lois">
                 <div class="infoMarca lois">
                     <h4>Pinceles y Pinceletas Lois</h4>
-                    <p>Contamos con 2 lineas de pinceles y pinceletas
-                        Pinceles Linea premium, fabricada por El Galgo, Virola 1serie 2012 y virola 2 serie 2019. Disponible en toda sus medidas del N 10 al 30. <br>
+                    <p>Contamos con 2 líneas de pinceles y pinceletas. <br>
+                        <br>
+                        Pinceles Línea premium: <br>
+                        Fabricada por El Galgo.
+                        Virola 1 serie 2012 y virola 2 serie 2019.
+                        Disponible en toda sus medidas del numero 7 al numero 30.
                         Sus cerdas permiten una buena carga de pintura y un excelente trabajo de peinado.
-                        Pinceletas linea premium.Fabrica por el galgo. Virola 2 y 4 serie 2003 disponible numero 40. <br>
-                        Pinceles linea economica. Virola 1 serie 1989 y virola 2 serie 1992. Esta linea de pinceles te permite hacer la diferencia en tus trabajos y lograr el acabado que necesitas. <br>
-                        Pinceletas linea economica, disponible en numero 40</p>
+                        Pinceletas línea premium:
+                        Fabrica por El Galgo.
+                        Virola 2 y Virola 4 serie 2003. Disponible en numero 40. <br>
+                        <br>
+                        Pinceles línea economica: <br>
+                        Virola 1 serie 1989 y Virola 2 serie 1992.
+                        Disponibles en todas sus medidas. Del numero 7 al numero 30
+                        Esta línea de pinceles te permite hacer la diferencia en tus trabajos y lograr el acabado que necesitas.
+                        Pinceletas línea economica:
+                        Se encuentra disponible en numero 40.
+                    </p>
                 </div>
                 <div class="contenedorFotos">
                     <img src="assets/Nuevas/pinceles azules.jpeg" class="foto">
@@ -125,9 +139,11 @@
                 <div class="infoMarca lois">
                     <h4>Venda Sintetica Lois</h4>
                     <p>Disponible en sus 3 medidas <br>
+                        <br>
                         1mts x 25 mts <br>
                         20 cm x 25 mts <br>
                         10 cm x 25 mts. <br>
+                        <br>
                         Sus fibras sinteticas de alta resistencia proporcionan consistencia y firmeza. Adaptandose a cualquier superficie superando todo tipo de movimiento.</p>
                 </div>
             </div>
@@ -164,9 +180,11 @@
                 <div class="infoMarca">
                     <h4>Más Productos</h4>
                     <p>Productos de la linea <br>
+                        <br>
                         Cetol <br>
                         Mota <br>
                         Penetrit <br>
+                        <br>
                         Trabajamos con productos de marcas reconocidas que le garantizan calidad a tu negocio.</p>
                 </div>
             </div>
@@ -186,7 +204,7 @@
         </div>
     </section-->
     <section class="contacto">
-        <div class="contenedorEmail">
+        <div class="contenedorEmail" id="formulario">
             <img src="assets/logo-Gmail-1.png" alt="">
             <p>Dejanos tu email y nos pondremos en contacto contigo</p>
             <input type="email" name="" id="email" placeholder="Por ejemplo: ejemplo@email.com">
@@ -216,5 +234,24 @@
         </div>
     </footer>
 <script src="scripts/script.js"></script>
+<script>
+    document.getElementById('enviarEmail').addEventListener('click', function(e) {
+      e.preventDefault();  // Evita que se recargue la página al enviar el formulario
+      const email = document.getElementById('email').value;
+  
+      fetch('https://script.google.com/macros/s/AKfycbyAUYQnrfM55WIa3DkzB6Xfc3aUnFFUrB0irIw17alg46ADkuerQy6ClbES99cogbah_w/exec', {
+        method: 'POST',
+        body: new URLSearchParams({ 'email': email })
+      })
+      .then(response => response.text())
+      .then(data => {
+        alert('Email enviado exitosamente');
+      })
+      .catch(error => {
+        alert('Hubo un error al enviar el correo');
+        console.error('Error:', error);
+      });
+    });
+  </script>
 </body>
 </html>
