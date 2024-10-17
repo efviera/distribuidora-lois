@@ -215,6 +215,14 @@ h1{
     overflow: hidden;
 }
 
+.pinceles{
+    height: 23em;
+}
+
+.lijas{
+    width: 20em;
+}
+
 .foto{
     position: absolute;
     top: 0;
